@@ -11,5 +11,4 @@
 
 @interface MetalBallView : UIView
 @property MetalBalls *metalBalls;
-- (void)renderScene;
 @end
