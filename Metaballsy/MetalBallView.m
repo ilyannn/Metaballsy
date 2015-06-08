@@ -72,9 +72,9 @@
 {
     static const float positions[] =
     {
-        0.0,  0.5, 0, 1,
-        -0.5, -0.5, 0, 1,
-        0.5, -0.5, 0, 1,
+        0.0,  1.5, 0, 1,
+        -1.5, -1.5, 0, 1,
+        1.5, -1.5, 0, 1,
     };
     
     static const float colors[] =
