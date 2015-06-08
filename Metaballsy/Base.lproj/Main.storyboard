@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,6 +20,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmG-RH-l6p" customClass="MetalBallView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.99368327860000005" green="0.69797801969999995" blue="0.42665383220000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TmG-RH-l6p" secondAttribute="height" multiplier="1:1" id="37O-gR-GhL"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -26,8 +30,15 @@
                             <constraint firstItem="TmG-RH-l6p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4nP-ea-lKV"/>
                             <constraint firstAttribute="bottom" secondItem="TmG-RH-l6p" secondAttribute="bottom" id="MDK-no-CVM"/>
                             <constraint firstAttribute="trailing" secondItem="TmG-RH-l6p" secondAttribute="trailing" id="T6w-0l-cjx"/>
+                            <constraint firstAttribute="centerX" secondItem="TmG-RH-l6p" secondAttribute="centerX" id="fIp-i2-wZH"/>
                             <constraint firstItem="TmG-RH-l6p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uIE-HD-brR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T6w-0l-cjx"/>
+                                <exclude reference="uIE-HD-brR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="metalBallView" destination="TmG-RH-l6p" id="81Q-DS-ap1"/>
