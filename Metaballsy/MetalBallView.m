@@ -88,7 +88,7 @@
     static const float metaballs[] =
     {
         0, 0, 0, 1,
-        0, -0.5, 0, 1,
+        0, 0, 0, 1,
     };
     
     
@@ -133,6 +133,12 @@
     while (!drawable){
         drawable = [self.metalLayer nextDrawable];
     }
+    
+    CGFloat speed = 5;
+    
+    float *contents = (float *)[self.metaballsBuffer contents];
+    contents[1] += 0.001 * speed;
+    contents[5] -= 0.001 * speed;
     
     id<MTLTexture> texture = drawable.texture;
 
