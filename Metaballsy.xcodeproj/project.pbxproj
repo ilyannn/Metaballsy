@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAFB59001B25F74500D28A0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB58FF1B25F74500D28A0D /* main.m */; };
+		BAFB59031B25F74500D28A0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB59021B25F74500D28A0D /* AppDelegate.m */; };
+		BAFB59061B25F74500D28A0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB59051B25F74500D28A0D /* ViewController.m */; };
+		BAFB59091B25F74500D28A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFB59071B25F74500D28A0D /* Main.storyboard */; };
+		BAFB590B1B25F74500D28A0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFB590A1B25F74500D28A0D /* Images.xcassets */; };
+		BAFB590E1B25F74500D28A0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFB590C1B25F74500D28A0D /* LaunchScreen.xib */; };
+		BAFB591A1B25F74500D28A0D /* MetaballsyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB59191B25F74500D28A0D /* MetaballsyTests.m */; };
+		BAFB59281B25F92000D28A0D /* MetalBalls.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB59271B25F92000D28A0D /* MetalBalls.m */; };
+		BAFB592B1B25FAA400D28A0D /* MetalBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB592A1B25FAA400D28A0D /* MetalBallView.m */; };
+		BAFB592D1B26023D00D28A0D /* MetalBalls.metal in Sources */ = {isa = PBXBuildFile; fileRef = BAFB592C1B26023D00D28A0D /* MetalBalls.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAFB59141B25F74500D28A0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAFB58F21B25F74500D28A0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAFB58F91B25F74500D28A0D;
+			remoteInfo = Metaballsy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAFB58FA1B25F74500D28A0D /* Metaballsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metaballsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFB58FE1B25F74500D28A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFB58FF1B25F74500D28A0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BAFB59011B25F74500D28A0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAFB59021B25F74500D28A0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BAFB59041B25F74500D28A0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BAFB59051B25F74500D28A0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BAFB59081B25F74500D28A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAFB590A1B25F74500D28A0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BAFB590D1B25F74500D28A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BAFB59131B25F74500D28A0D /* MetaballsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetaballsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFB59181B25F74500D28A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFB59191B25F74500D28A0D /* MetaballsyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetaballsyTests.m; sourceTree = "<group>"; };
+		BAFB59261B25F92000D28A0D /* MetalBalls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalBalls.h; sourceTree = "<group>"; };
+		BAFB59271B25F92000D28A0D /* MetalBalls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalBalls.m; sourceTree = "<group>"; };
+		BAFB59291B25FAA400D28A0D /* MetalBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalBallView.h; sourceTree = "<group>"; };
+		BAFB592A1B25FAA400D28A0D /* MetalBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalBallView.m; sourceTree = "<group>"; };
+		BAFB592C1B26023D00D28A0D /* MetalBalls.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalBalls.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAFB58F71B25F74500D28A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFB59101B25F74500D28A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAFB58F11B25F74500D28A0D = {
+			isa = PBXGroup;
+			children = (
+				BAFB58FC1B25F74500D28A0D /* Metaballsy */,
+				BAFB59161B25F74500D28A0D /* MetaballsyTests */,
+				BAFB58FB1B25F74500D28A0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAFB58FB1B25F74500D28A0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAFB58FA1B25F74500D28A0D /* Metaballsy.app */,
+				BAFB59131B25F74500D28A0D /* MetaballsyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAFB58FC1B25F74500D28A0D /* Metaballsy */ = {
+			isa = PBXGroup;
+			children = (
+				BAFB59011B25F74500D28A0D /* AppDelegate.h */,
+				BAFB59021B25F74500D28A0D /* AppDelegate.m */,
+				BAFB59041B25F74500D28A0D /* ViewController.h */,
+				BAFB59051B25F74500D28A0D /* ViewController.m */,
+				BAFB59071B25F74500D28A0D /* Main.storyboard */,
+				BAFB590A1B25F74500D28A0D /* Images.xcassets */,
+				BAFB590C1B25F74500D28A0D /* LaunchScreen.xib */,
+				BAFB58FD1B25F74500D28A0D /* Supporting Files */,
+				BAFB59261B25F92000D28A0D /* MetalBalls.h */,
+				BAFB59271B25F92000D28A0D /* MetalBalls.m */,
+				BAFB59291B25FAA400D28A0D /* MetalBallView.h */,
+				BAFB592A1B25FAA400D28A0D /* MetalBallView.m */,
+				BAFB592C1B26023D00D28A0D /* MetalBalls.metal */,
+			);
+			path = Metaballsy;
+			sourceTree = "<group>";
+		};
+		BAFB58FD1B25F74500D28A0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAFB58FE1B25F74500D28A0D /* Info.plist */,
+				BAFB58FF1B25F74500D28A0D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAFB59161B25F74500D28A0D /* MetaballsyTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAFB59191B25F74500D28A0D /* MetaballsyTests.m */,
+				BAFB59171B25F74500D28A0D /* Supporting Files */,
+			);
+			path = MetaballsyTests;
+			sourceTree = "<group>";
+		};
+		BAFB59171B25F74500D28A0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAFB59181B25F74500D28A0D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAFB58F91B25F74500D28A0D /* Metaballsy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFB591D1B25F74500D28A0D /* Build configuration list for PBXNativeTarget "Metaballsy" */;
+			buildPhases = (
+				BAFB58F61B25F74500D28A0D /* Sources */,
+				BAFB58F71B25F74500D28A0D /* Frameworks */,
+				BAFB58F81B25F74500D28A0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Metaballsy;
+			productName = Metaballsy;
+			productReference = BAFB58FA1B25F74500D28A0D /* Metaballsy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAFB59121B25F74500D28A0D /* MetaballsyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFB59201B25F74500D28A0D /* Build configuration list for PBXNativeTarget "MetaballsyTests" */;
+			buildPhases = (
+				BAFB590F1B25F74500D28A0D /* Sources */,
+				BAFB59101B25F74500D28A0D /* Frameworks */,
+				BAFB59111B25F74500D28A0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAFB59151B25F74500D28A0D /* PBXTargetDependency */,
+			);
+			name = MetaballsyTests;
+			productName = MetaballsyTests;
+			productReference = BAFB59131B25F74500D28A0D /* MetaballsyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAFB58F21B25F74500D28A0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = ilyan;
+				TargetAttributes = {
+					BAFB58F91B25F74500D28A0D = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					BAFB59121B25F74500D28A0D = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = BAFB58F91B25F74500D28A0D;
+					};
+				};
+			};
+			buildConfigurationList = BAFB58F51B25F74500D28A0D /* Build configuration list for PBXProject "Metaballsy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAFB58F11B25F74500D28A0D;
+			productRefGroup = BAFB58FB1B25F74500D28A0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAFB58F91B25F74500D28A0D /* Metaballsy */,
+				BAFB59121B25F74500D28A0D /* MetaballsyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAFB58F81B25F74500D28A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFB59091B25F74500D28A0D /* Main.storyboard in Resources */,
+				BAFB590E1B25F74500D28A0D /* LaunchScreen.xib in Resources */,
+				BAFB590B1B25F74500D28A0D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFB59111B25F74500D28A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAFB58F61B25F74500D28A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFB592D1B26023D00D28A0D /* MetalBalls.metal in Sources */,
+				BAFB59281B25F92000D28A0D /* MetalBalls.m in Sources */,
+				BAFB59061B25F74500D28A0D /* ViewController.m in Sources */,
+				BAFB592B1B25FAA400D28A0D /* MetalBallView.m in Sources */,
+				BAFB59031B25F74500D28A0D /* AppDelegate.m in Sources */,
+				BAFB59001B25F74500D28A0D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFB590F1B25F74500D28A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFB591A1B25F74500D28A0D /* MetaballsyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAFB59151B25F74500D28A0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAFB58F91B25F74500D28A0D /* Metaballsy */;
+			targetProxy = BAFB59141B25F74500D28A0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAFB59071B25F74500D28A0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAFB59081B25F74500D28A0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAFB590C1B25F74500D28A0D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAFB590D1B25F74500D28A0D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAFB591B1B25F74500D28A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAFB591C1B25F74500D28A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAFB591E1B25F74500D28A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Metaballsy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BAFB591F1B25F74500D28A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Metaballsy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BAFB59211B25F74500D28A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MetaballsyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metaballsy.app/Metaballsy";
+			};
+			name = Debug;
+		};
+		BAFB59221B25F74500D28A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MetaballsyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metaballsy.app/Metaballsy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAFB58F51B25F74500D28A0D /* Build configuration list for PBXProject "Metaballsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFB591B1B25F74500D28A0D /* Debug */,
+				BAFB591C1B25F74500D28A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAFB591D1B25F74500D28A0D /* Build configuration list for PBXNativeTarget "Metaballsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFB591E1B25F74500D28A0D /* Debug */,
+				BAFB591F1B25F74500D28A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BAFB59201B25F74500D28A0D /* Build configuration list for PBXNativeTarget "MetaballsyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFB59211B25F74500D28A0D /* Debug */,
+				BAFB59221B25F74500D28A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAFB58F21B25F74500D28A0D /* Project object */;
+}
