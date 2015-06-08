@@ -22,6 +22,7 @@
 
 @property (readonly) id <MTLBuffer> positionBuffer;
 @property (readonly) id <MTLBuffer> colorBuffer;
+@property (readonly) id <MTLBuffer> metaballsBuffer;
 @end
 
 @implementation MetalBallView
@@ -84,7 +85,12 @@
         0, 0, 1, 1,
     };
     
-    //    MetalBall triangle[3] = { { -.5f, 0.0f }, { 0.5f, 0.0f }, { 0.0f, 0.5f } };
+    static const float metaballs[] =
+    {
+        0, 0, 0, 1,
+        0, -0.5, 0, 1,
+    };
+    
     
     _positionBuffer = [self.device newBufferWithBytes:positions
                                                length:sizeof(positions)
@@ -92,6 +98,10 @@
     _colorBuffer = [self.device newBufferWithBytes:colors
                                             length:sizeof(colors)
                                            options:MTLResourceOptionCPUCacheModeDefault];
+
+    _metaballsBuffer = [self.device newBufferWithBytes:metaballs
+                                                length:sizeof(metaballs)
+                                               options:MTLResourceOptionCPUCacheModeDefault];
     
 }
 
@@ -140,6 +150,7 @@
     [commandEncoder setRenderPipelineState: self.renderPipelineState];    
     [commandEncoder setVertexBuffer:self.positionBuffer offset:0 atIndex:0 ];
     [commandEncoder setVertexBuffer:self.colorBuffer offset:0 atIndex:1 ];
+    [commandEncoder setVertexBuffer:self.metaballsBuffer offset:0 atIndex:2 ];
     [commandEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3 instanceCount:1];
     [commandEncoder endEncoding];
         
