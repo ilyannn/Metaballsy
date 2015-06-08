@@ -14,8 +14,10 @@ struct ColoredVertex
 {
     float4 position [[position]];
     float4 color;
+    float4 vector0;
     float4 vector1;
     float4 vector2;
+    float4 vector3;
 };
 
 
@@ -28,30 +30,45 @@ vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
     vert.position = position[vid];
     vert.color = color[vid];
     
-    vert.vector1 = position[vid];
-    vert.vector2 = position[vid];
-
-    vert.vector1[3] = 0;
-    vert.vector2[3] = 0;
+    float radius = 0.4;
     
-    vert.vector1[0] -= metaballs[0][0];
-    vert.vector1[1] -= metaballs[0][1];
-
-    vert.vector2[0] -= metaballs[1][0];
-    vert.vector2[1] -= metaballs[1][1];
-
+    vert.vector0 =  (position[vid] - metaballs[0]) / radius;
+    vert.vector1 =  (position[vid] - metaballs[1]) / radius;
+    vert.vector2 =  (position[vid] - metaballs[2]) / radius;
+    vert.vector3 =  (position[vid] - metaballs[3]) / radius;
+    
+//    vert.vector0[2] = 0;
+//    vert.vector1[2] = 0;
+//
+//    vert.vector0[3] = 0;
+//    vert.vector1[3] = 0;
+    
     return vert;
+}
+
+float RenderMan(float dist_sq) {
+    if (dist_sq > 1) {
+        return 0;
+    }
+    
+    return pow(pow(1 - dist_sq, 3), 0.7);
 }
 
 fragment float4 fragment_main(ColoredVertex vert [[stage_in]])
 {
     float4 color = vert.color;
+    
+    float dist0 = length_squared(vert.vector0);
     float dist1 = length_squared(vert.vector1);
     float dist2 = length_squared(vert.vector2);
-    float term1 = pow(dist1, -1);
-    float term2 = pow(dist2, -1);
+    float dist3 = length_squared(vert.vector3);
+   
+    float term0 = RenderMan(dist0);
+    float term1 = RenderMan(dist1);
+    float term2 = RenderMan(dist2);
+    float term3 = RenderMan(dist3);
     
-    if (term1 + term2 > 15 ) {
+    if (term0 + term1 + term2 + term3 > 0.6 ) {
         color[0] = 0;
         color[1] = 0;
         color[2] = 0;

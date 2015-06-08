@@ -89,6 +89,8 @@
     {
         0, 0, 0, 1,
         0, 0, 0, 1,
+        0, 0, 0, 1,
+        0, 0, 0, 1,
     };
     
     
@@ -134,11 +136,23 @@
         drawable = [self.metalLayer nextDrawable];
     }
     
-    CGFloat speed = 5;
+    CGFloat speed = 0.3;
     
     float *contents = (float *)[self.metaballsBuffer contents];
-    contents[1] += 0.001 * speed;
-    contents[5] -= 0.001 * speed;
+    
+    float threshold = 0.6;
+    static float direction = +1;
+    
+    if (contents[0] > threshold) {
+        direction = -1;
+    } else if (contents[0] < -threshold) {
+        direction = +1;
+    }
+    
+    float step = (1.0/60.0) * speed * direction;
+    contents[0] += step;
+    contents[5] += step;
+    contents[9] -= step;
     
     id<MTLTexture> texture = drawable.texture;
 
