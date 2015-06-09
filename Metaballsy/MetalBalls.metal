@@ -40,9 +40,8 @@ vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
     return vert;
 }
 
-float RenderMan(float dist_sq, float gooiness, float smooth) {
-    float coef = 1 - smoothstep(1 - smooth, 1 + smooth, dist_sq);        
-    return pow(pow(coef * (1 - dist_sq), 3), gooiness);
+float RenderMan(float dist_sq, float gooiness) {
+    return pow(clamp(1 - dist_sq, 0, 1), 3 * gooiness);
 }
 
 fragment float4 fragment_main(ColoredVertex vert [[stage_in]],
@@ -58,19 +57,26 @@ fragment float4 fragment_main(ColoredVertex vert [[stage_in]],
     float dist2 = length_squared(vert.vector2 / radius);
     float dist3 = length_squared(vert.vector3 / radius);
 
-    float term0 = RenderMan(dist0, gooiness, smooth);
-    float term1 = RenderMan(dist1, gooiness, smooth);
-    float term2 = RenderMan(dist2, gooiness, smooth);
-    float term3 = RenderMan(dist3, gooiness, smooth);
+    float term0 = RenderMan(dist0, gooiness);
+    float term1 = RenderMan(dist1, gooiness);
+    float term2 = RenderMan(dist2, gooiness);
+    float term3 = RenderMan(dist3, gooiness);
     
-    bool pixel = term0 + term1 + term2 + term3 > threshold;
+    float density = (term0 + term1 + term2 + term3 / threshold);
     
     float4 color = vert.background;
 
-    if (pixel) {
+    if (smooth == 0 && density > 1) {
         color[0] = 0;
         color[1] = 0;
         color[2] = 0;
+    } 
+    
+    if (smooth != 0) {
+        float coef = smoothstep(1 - smooth, 1 + smooth, density);        
+        color[0] = coef * color[0];
+        color[1] = coef * color[1];
+        color[2] = coef * color[2];
     }
     
     return color;
