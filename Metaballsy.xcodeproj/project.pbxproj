@@ -434,6 +434,7 @@
 				BAFB591F1B25F74500D28A0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAFB59201B25F74500D28A0D /* Build configuration list for PBXNativeTarget "MetaballsyTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +443,7 @@
 				BAFB59221B25F74500D28A0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

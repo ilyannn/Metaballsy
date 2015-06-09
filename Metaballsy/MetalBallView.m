@@ -26,9 +26,7 @@
 @property (readonly) id <MTLBuffer> parametersBuffer;
 @end
 
-@implementation MetalBallView {
-    float _parameters[3];
-}
+@implementation MetalBallView 
 
 
 #pragma mark - UIView setup
@@ -71,28 +69,32 @@
 
 #pragma mark - Accessors
 
+- (float *)parameters {
+    return (float *)[self.parametersBuffer contents];
+}
+
 - (float)radius {
-    return _parameters[0];
+    return self.parameters[0];
 }
 
 - (float)threshold {
-    return _parameters[1];
+    return self.parameters[1];
 }
 
 - (float)gooiness {
-    return _parameters[2];
+    return self.parameters[2];
 }
 
 - (void)setRadius:(float)radius {
-    _parameters[0] = radius;
+    self.parameters[0] = radius;
 }
 
 - (void)setThreshold:(float)threshold {
-    _parameters[1] = threshold;
+    self.parameters[1] = threshold;
 }
 
 - (void)setGooiness:(float)gooiness {
-    _parameters[2] = gooiness;
+    self.parameters[2] = gooiness;
 }
 
 
@@ -133,8 +135,7 @@
                                                 length:sizeof(metaballs)
                                                options:MTLResourceOptionCPUCacheModeDefault];
 
-    _parametersBuffer = [self.device newBufferWithBytes:_parameters
-                                                length:sizeof(_parameters)
+    _parametersBuffer = [self.device newBufferWithLength:3 * sizeof(float)
                                                options:MTLResourceOptionCPUCacheModeDefault];
 
 }

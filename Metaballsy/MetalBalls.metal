@@ -33,9 +33,9 @@ vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
     vert.position = position[vid];
     vert.color = color[vid];
     
-    float radius = parameters[0];    // 0.4;
-    float threshold = parameters[1]; // 0.6;
-    float gooiness = parameters[2];  // 0.7;
+    float radius = parameters[0];
+    float threshold = parameters[1];
+    float gooiness = parameters[2]; 
     
     vert.vector0 =  (position[vid] - metaballs[0]) / radius;
     vert.vector1 =  (position[vid] - metaballs[1]) / radius;
@@ -44,12 +44,6 @@ vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
     
     vert.threshold = threshold;
     vert.gooiness = gooiness;
-    
-//    vert.vector0[2] = 0;
-//    vert.vector1[2] = 0;
-//
-//    vert.vector0[3] = 0;
-//    vert.vector1[3] = 0;
     
     return vert;
 }
@@ -76,7 +70,7 @@ fragment float4 fragment_main(ColoredVertex vert [[stage_in]])
     float term2 = RenderMan(dist2, vert.gooiness);
     float term3 = RenderMan(dist3, vert.gooiness);
     
-    if (term0 + term1 + term2 + term3 > vert.threshold ) {
+    if (term0 + term1 + term2 + term3 > vert.threshold) {
         color[0] = 0;
         color[1] = 0;
         color[2] = 0;
