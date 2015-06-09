@@ -69,6 +69,10 @@
 
 #pragma mark - Accessors
 
+- (NSUInteger)parametersCount {
+    return 4;
+}
+
 - (float *)parameters {
     return (float *)[self.parametersBuffer contents];
 }
@@ -85,6 +89,10 @@
     return self.parameters[2];
 }
 
+- (float)smooth {
+    return self.parameters[3];
+}
+
 - (void)setRadius:(float)radius {
     self.parameters[0] = radius;
 }
@@ -95,6 +103,10 @@
 
 - (void)setGooiness:(float)gooiness {
     self.parameters[2] = gooiness;
+}
+
+- (void)setSmooth:(float)smooth {
+    self.parameters[3] = smooth;
 }
 
 
@@ -135,7 +147,7 @@
                                                 length:sizeof(metaballs)
                                                options:MTLResourceOptionCPUCacheModeDefault];
 
-    _parametersBuffer = [self.device newBufferWithLength:3 * sizeof(float)
+    _parametersBuffer = [self.device newBufferWithLength:[self parametersCount] * sizeof(float)
                                                options:MTLResourceOptionCPUCacheModeDefault];
 
 }

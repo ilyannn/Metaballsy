@@ -15,12 +15,14 @@
 @property (weak, nonatomic) IBOutlet UISlider *distanceSlider;
 @property (weak, nonatomic) IBOutlet UISlider *thresholdSlider;
 @property (weak, nonatomic) IBOutlet UISlider *gooinessSlider;
+@property (weak, nonatomic) IBOutlet UISlider *smoothSlider;
 
 @property (weak, nonatomic) IBOutlet UILabel *radiusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *speedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *thresholdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *gooinessLabel;
+@property (weak, nonatomic) IBOutlet UILabel *smoothLabel;
 
 
 @property (weak, nonatomic) IBOutlet MetalBallView *metalBallView;
@@ -36,6 +38,7 @@
     [self distanceChanged:self];
     [self thresholdChanged:self];
     [self gooinessChanged:self];
+    [self smoothChanged:self];
 }
 
 - (void)updateLabel:(UILabel *)label fromSlider:(UISlider *)slider {
@@ -67,6 +70,10 @@
     [self updateLabel:self.gooinessLabel fromSlider:self.gooinessSlider];
 }
 
+- (IBAction)smoothChanged:(id)sender {
+    self.metalBallView.smooth = self.smoothSlider.value; 
+    [self updateLabel:self.smoothLabel fromSlider:self.smoothSlider];
+}
 
 
 @end

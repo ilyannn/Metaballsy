@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -28,112 +29,136 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="256"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="85W-pH-QKX">
-                                        <rect key="frame" x="148" y="40" width="548" height="31"/>
+                                        <rect key="frame" x="148" y="30" width="548" height="31"/>
                                         <connections>
                                             <action selector="radiusChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kfr-GL-g2E"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUg-2V-n4n">
-                                        <rect key="frame" x="20" y="44" width="111" height="21"/>
+                                        <rect key="frame" x="20" y="34" width="111" height="21"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
-                                        <rect key="frame" x="148" y="78" width="548" height="31"/>
+                                        <rect key="frame" x="148" y="68" width="548" height="31"/>
                                         <connections>
                                             <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wwy-OO-hN8"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5P-r0-z3K">
-                                        <rect key="frame" x="20" y="82" width="111" height="21"/>
+                                        <rect key="frame" x="20" y="72" width="111" height="21"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.45000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-HW-Z1v">
-                                        <rect key="frame" x="148" y="116" width="548" height="31"/>
+                                        <rect key="frame" x="148" y="106" width="548" height="31"/>
                                         <connections>
                                             <action selector="distanceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5zz-mS-UhI"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDH-cs-1YR">
-                                        <rect key="frame" x="20" y="120" width="111" height="21"/>
+                                        <rect key="frame" x="20" y="110" width="111" height="21"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-lV-IB5">
-                                        <rect key="frame" x="148" y="154" width="548" height="31"/>
+                                        <rect key="frame" x="148" y="144" width="548" height="31"/>
                                         <connections>
                                             <action selector="thresholdChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VB6-zH-RYg"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Threshold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-fr-4hK">
-                                        <rect key="frame" x="20" y="158" width="111" height="21"/>
+                                        <rect key="frame" x="20" y="148" width="111" height="21"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-vg-lNJ">
-                                        <rect key="frame" x="148" y="192" width="548" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-vg-lNJ">
+                                        <rect key="frame" x="148" y="182" width="548" height="31"/>
                                         <connections>
                                             <action selector="gooinessChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="raq-zU-f3F"/>
+                                            <action selector="smoothChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ta8-PV-N6i"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gooiness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-6l-i9S">
-                                        <rect key="frame" x="20" y="196" width="111" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smooth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-6l-i9S">
+                                        <rect key="frame" x="20" y="186" width="111" height="21"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKJ-ra-CTv">
-                                        <rect key="frame" x="704" y="40" width="50" height="30"/>
+                                        <rect key="frame" x="704" y="30" width="50" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="cuF-4l-J8q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-rk-ber">
-                                        <rect key="frame" x="704" y="78" width="50" height="30"/>
+                                        <rect key="frame" x="704" y="68" width="50" height="30"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PW-Kg-T3p">
-                                        <rect key="frame" x="704" y="116" width="50" height="30"/>
+                                        <rect key="frame" x="704" y="106" width="50" height="30"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x7-Je-jg7">
-                                        <rect key="frame" x="704" y="154" width="50" height="30"/>
+                                        <rect key="frame" x="704" y="144" width="50" height="30"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKX-Mt-Gt1">
-                                        <rect key="frame" x="704" y="192" width="50" height="30"/>
+                                        <rect key="frame" x="704" y="182" width="50" height="30"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.89999997615814209" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="JSs-0Y-GI9">
+                                        <rect key="frame" x="148" y="220" width="548" height="31"/>
+                                        <connections>
+                                            <action selector="gooinessChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="25o-za-Jmw"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gooiness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euH-T4-AfZ">
+                                        <rect key="frame" x="20" y="220" width="111" height="30"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivn-x2-xwn">
+                                        <rect key="frame" x="704" y="220" width="50" height="30"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="RJn-fr-4hK" firstAttribute="top" secondItem="PeG-lV-IB5" secondAttribute="top" constant="4" id="0BJ-OV-A3z"/>
+                                    <constraint firstItem="JSs-0Y-GI9" firstAttribute="top" secondItem="SSK-vg-lNJ" secondAttribute="bottom" constant="8" id="1PD-DD-Lv8"/>
+                                    <constraint firstItem="SSK-vg-lNJ" firstAttribute="leading" secondItem="JSs-0Y-GI9" secondAttribute="leading" id="1ub-OD-lh9"/>
                                     <constraint firstItem="AKJ-ra-CTv" firstAttribute="top" secondItem="85W-pH-QKX" secondAttribute="top" id="2fb-X4-rZr"/>
+                                    <constraint firstItem="Ivn-x2-xwn" firstAttribute="top" secondItem="JSs-0Y-GI9" secondAttribute="top" id="371-nX-GsY"/>
                                     <constraint firstItem="PeG-lV-IB5" firstAttribute="trailing" secondItem="85W-pH-QKX" secondAttribute="trailing" id="3Li-lX-XL4"/>
                                     <constraint firstItem="RJn-fr-4hK" firstAttribute="trailing" secondItem="kUg-2V-n4n" secondAttribute="trailing" id="5Sc-iZ-K12"/>
                                     <constraint firstItem="0Wg-6l-i9S" firstAttribute="leading" secondItem="kUg-2V-n4n" secondAttribute="leading" id="6Hq-De-9EB"/>
                                     <constraint firstItem="3x7-Je-jg7" firstAttribute="top" secondItem="PeG-lV-IB5" secondAttribute="top" id="7Vz-HV-LaW"/>
                                     <constraint firstItem="SSK-vg-lNJ" firstAttribute="top" secondItem="PeG-lV-IB5" secondAttribute="bottom" constant="8" id="8kC-bd-inW"/>
                                     <constraint firstItem="RJn-fr-4hK" firstAttribute="leading" secondItem="kUg-2V-n4n" secondAttribute="leading" id="8ue-Yc-sec"/>
+                                    <constraint firstItem="euH-T4-AfZ" firstAttribute="bottom" secondItem="JSs-0Y-GI9" secondAttribute="bottom" id="BM1-xb-89y"/>
                                     <constraint firstItem="1PW-Kg-T3p" firstAttribute="leading" secondItem="AKJ-ra-CTv" secondAttribute="leading" id="FIQ-8M-HBq"/>
+                                    <constraint firstItem="Ivn-x2-xwn" firstAttribute="leading" secondItem="AKJ-ra-CTv" secondAttribute="leading" id="Fvt-bz-0FK"/>
                                     <constraint firstItem="pVq-HW-Z1v" firstAttribute="leading" secondItem="85W-pH-QKX" secondAttribute="leading" id="Gip-ZU-Ccc"/>
-                                    <constraint firstItem="85W-pH-QKX" firstAttribute="top" secondItem="Ypm-eS-aJw" secondAttribute="top" constant="40" id="HB1-ko-Bv5"/>
+                                    <constraint firstItem="85W-pH-QKX" firstAttribute="top" secondItem="Ypm-eS-aJw" secondAttribute="top" constant="30" id="HB1-ko-Bv5"/>
                                     <constraint firstItem="fYb-rk-ber" firstAttribute="trailing" secondItem="AKJ-ra-CTv" secondAttribute="trailing" id="I2k-ew-5Xb"/>
                                     <constraint firstItem="1PW-Kg-T3p" firstAttribute="top" secondItem="pVq-HW-Z1v" secondAttribute="top" id="IIF-3J-w5F"/>
                                     <constraint firstItem="B5P-r0-z3K" firstAttribute="trailing" secondItem="kUg-2V-n4n" secondAttribute="trailing" id="Lx5-8a-JeK"/>
@@ -141,7 +166,9 @@
                                     <constraint firstItem="pVq-HW-Z1v" firstAttribute="trailing" secondItem="85W-pH-QKX" secondAttribute="trailing" id="Nmc-Tm-6Ix"/>
                                     <constraint firstItem="PeG-lV-IB5" firstAttribute="leading" secondItem="85W-pH-QKX" secondAttribute="leading" id="O2L-fv-SNE"/>
                                     <constraint firstItem="PeG-lV-IB5" firstAttribute="trailing" secondItem="SSK-vg-lNJ" secondAttribute="trailing" id="OAg-ui-Z27"/>
+                                    <constraint firstItem="SSK-vg-lNJ" firstAttribute="trailing" secondItem="JSs-0Y-GI9" secondAttribute="trailing" id="RZr-tQ-VrM"/>
                                     <constraint firstItem="kUg-2V-n4n" firstAttribute="leading" secondItem="Ypm-eS-aJw" secondAttribute="leading" constant="20" symbolic="YES" id="ReM-t3-wGm"/>
+                                    <constraint firstItem="euH-T4-AfZ" firstAttribute="leading" secondItem="kUg-2V-n4n" secondAttribute="leading" id="TKh-1N-efu"/>
                                     <constraint firstItem="3x7-Je-jg7" firstAttribute="trailing" secondItem="AKJ-ra-CTv" secondAttribute="trailing" id="UOx-9q-BNC"/>
                                     <constraint firstItem="nDH-cs-1YR" firstAttribute="trailing" secondItem="kUg-2V-n4n" secondAttribute="trailing" id="UbN-Ek-eCq"/>
                                     <constraint firstItem="0Wg-6l-i9S" firstAttribute="trailing" secondItem="kUg-2V-n4n" secondAttribute="trailing" id="Ueb-uC-T28"/>
@@ -151,9 +178,12 @@
                                     <constraint firstItem="fYb-rk-ber" firstAttribute="leading" secondItem="AKJ-ra-CTv" secondAttribute="leading" id="YFz-Q7-g9w"/>
                                     <constraint firstItem="1VY-ka-KPm" firstAttribute="top" secondItem="85W-pH-QKX" secondAttribute="bottom" constant="8" id="YP8-xt-bVa"/>
                                     <constraint firstItem="1PW-Kg-T3p" firstAttribute="trailing" secondItem="AKJ-ra-CTv" secondAttribute="trailing" id="aA8-Tf-gqO"/>
+                                    <constraint firstItem="Ivn-x2-xwn" firstAttribute="bottom" secondItem="JSs-0Y-GI9" secondAttribute="bottom" id="aIn-53-StH"/>
                                     <constraint firstItem="1PW-Kg-T3p" firstAttribute="bottom" secondItem="pVq-HW-Z1v" secondAttribute="bottom" id="aOd-v7-yC7"/>
+                                    <constraint firstItem="Ivn-x2-xwn" firstAttribute="trailing" secondItem="AKJ-ra-CTv" secondAttribute="trailing" id="cYc-Dr-r8D"/>
                                     <constraint firstItem="nDH-cs-1YR" firstAttribute="bottom" secondItem="pVq-HW-Z1v" secondAttribute="bottom" constant="-5" id="dS2-YW-dym"/>
                                     <constraint firstItem="bKX-Mt-Gt1" firstAttribute="trailing" secondItem="AKJ-ra-CTv" secondAttribute="trailing" id="e3o-To-A3h"/>
+                                    <constraint firstItem="euH-T4-AfZ" firstAttribute="trailing" secondItem="kUg-2V-n4n" secondAttribute="trailing" id="fCg-Cd-MGC"/>
                                     <constraint firstItem="AKJ-ra-CTv" firstAttribute="bottom" secondItem="85W-pH-QKX" secondAttribute="bottom" id="fTi-Dz-cWC"/>
                                     <constraint firstItem="bKX-Mt-Gt1" firstAttribute="bottom" secondItem="SSK-vg-lNJ" secondAttribute="bottom" id="gIp-sW-8kY"/>
                                     <constraint firstItem="AKJ-ra-CTv" firstAttribute="leading" secondItem="85W-pH-QKX" secondAttribute="trailing" constant="10" id="iFz-8l-ObH"/>
@@ -171,6 +201,7 @@
                                     <constraint firstItem="1VY-ka-KPm" firstAttribute="bottom" secondItem="fYb-rk-ber" secondAttribute="bottom" id="t8M-RV-oci"/>
                                     <constraint firstItem="kUg-2V-n4n" firstAttribute="top" secondItem="85W-pH-QKX" secondAttribute="top" constant="4" id="uDo-OR-Wl5"/>
                                     <constraint firstItem="0Wg-6l-i9S" firstAttribute="bottom" secondItem="SSK-vg-lNJ" secondAttribute="bottom" constant="-5" id="uWM-9U-Omx"/>
+                                    <constraint firstItem="euH-T4-AfZ" firstAttribute="top" secondItem="JSs-0Y-GI9" secondAttribute="top" id="vLe-Uv-GT4"/>
                                     <constraint firstItem="PeG-lV-IB5" firstAttribute="top" secondItem="pVq-HW-Z1v" secondAttribute="bottom" constant="8" id="wMt-HZ-8TM"/>
                                     <constraint firstItem="85W-pH-QKX" firstAttribute="leading" secondItem="Ypm-eS-aJw" secondAttribute="leading" constant="150" id="wj8-fh-mk0"/>
                                     <constraint firstItem="1VY-ka-KPm" firstAttribute="trailing" secondItem="85W-pH-QKX" secondAttribute="trailing" id="xQx-4H-ZY8"/>
@@ -206,11 +237,13 @@
                     <connections>
                         <outlet property="distanceLabel" destination="1PW-Kg-T3p" id="Rsz-JJ-TLi"/>
                         <outlet property="distanceSlider" destination="pVq-HW-Z1v" id="Ia9-Eg-SP8"/>
-                        <outlet property="gooinessLabel" destination="bKX-Mt-Gt1" id="Vbz-CK-1ov"/>
-                        <outlet property="gooinessSlider" destination="SSK-vg-lNJ" id="Gyo-bR-TeZ"/>
+                        <outlet property="gooinessLabel" destination="Ivn-x2-xwn" id="vU2-N9-F9M"/>
+                        <outlet property="gooinessSlider" destination="JSs-0Y-GI9" id="Li2-KH-eaS"/>
                         <outlet property="metalBallView" destination="TmG-RH-l6p" id="81Q-DS-ap1"/>
                         <outlet property="radiusLabel" destination="AKJ-ra-CTv" id="OoK-JF-eQb"/>
                         <outlet property="radiusSlider" destination="85W-pH-QKX" id="VBU-kY-1Y9"/>
+                        <outlet property="smoothLabel" destination="bKX-Mt-Gt1" id="FSP-co-odQ"/>
+                        <outlet property="smoothSlider" destination="SSK-vg-lNJ" id="tfe-ar-gi2"/>
                         <outlet property="speedLabel" destination="fYb-rk-ber" id="den-oU-1wD"/>
                         <outlet property="speedSlider" destination="1VY-ka-KPm" id="EPL-KL-odp"/>
                         <outlet property="thresholdLabel" destination="3x7-Je-jg7" id="IrB-1Z-9Ct"/>

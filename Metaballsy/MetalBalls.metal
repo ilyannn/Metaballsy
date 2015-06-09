@@ -7,6 +7,7 @@
 //
 
 using namespace metal;
+#include <metal_common>
 #include <metal_math>
 #include <metal_geometric>
 
@@ -39,12 +40,9 @@ vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
     return vert;
 }
 
-float RenderMan(float dist_sq, float gooiness) {
-    if (dist_sq > 1) {
-        return 0;
-    }
-    
-    return pow(pow(1 - dist_sq, 3), gooiness);
+float RenderMan(float dist_sq, float gooiness, float smooth) {
+    float coef = 1 - smoothstep(1 - smooth, 1 + smooth, dist_sq);        
+    return pow(pow(coef * (1 - dist_sq), 3), gooiness);
 }
 
 fragment float4 fragment_main(ColoredVertex vert [[stage_in]],
@@ -53,16 +51,17 @@ fragment float4 fragment_main(ColoredVertex vert [[stage_in]],
     float radius    = parameters[0];
     float threshold = parameters[1];
     float gooiness  = parameters[2]; 
+    float smooth    = parameters[3];
 
     float dist0 = length_squared(vert.vector0 / radius);
     float dist1 = length_squared(vert.vector1 / radius);
     float dist2 = length_squared(vert.vector2 / radius);
     float dist3 = length_squared(vert.vector3 / radius);
 
-    float term0 = RenderMan(dist0, gooiness);
-    float term1 = RenderMan(dist1, gooiness);
-    float term2 = RenderMan(dist2, gooiness);
-    float term3 = RenderMan(dist3, gooiness);
+    float term0 = RenderMan(dist0, gooiness, smooth);
+    float term1 = RenderMan(dist1, gooiness, smooth);
+    float term2 = RenderMan(dist2, gooiness, smooth);
+    float term3 = RenderMan(dist3, gooiness, smooth);
     
     bool pixel = term0 + term1 + term2 + term3 > threshold;
     

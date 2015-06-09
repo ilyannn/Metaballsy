@@ -18,4 +18,5 @@
 @property (nonatomic) float threshold;
 @property (nonatomic) float speed;
 @property (nonatomic) float distance;
+@property (nonatomic) float smooth;
 @end
