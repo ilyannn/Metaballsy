@@ -33,7 +33,7 @@
                                             <action selector="radiusChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kfr-GL-g2E"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
                                         <rect key="frame" x="148" y="78" width="602" height="31"/>
                                         <connections>
                                             <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wwy-OO-hN8"/>
@@ -45,7 +45,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-HW-Z1v">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.45000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-HW-Z1v">
                                         <rect key="frame" x="148" y="116" width="602" height="31"/>
                                         <connections>
                                             <action selector="distanceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5zz-mS-UhI"/>
