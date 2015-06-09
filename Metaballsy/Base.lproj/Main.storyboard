@@ -40,7 +40,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.7" minValue="0.29999999999999999" maxValue="2.2000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
                                         <rect key="frame" x="93" y="44" width="685" height="31"/>
                                         <connections>
                                             <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wwy-OO-hN8"/>
@@ -52,7 +52,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.7000000476837158" minValue="0.30000001192092896" maxValue="2.2000000476837158" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-HW-Z1v">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-HW-Z1v">
                                         <rect key="frame" x="93" y="82" width="685" height="31"/>
                                         <connections>
                                             <action selector="boundaryChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5zz-mS-UhI"/>
@@ -64,7 +64,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.59999999999999998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-lV-IB5">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.59999999999999998" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-lV-IB5">
                                         <rect key="frame" x="93" y="113" width="685" height="31"/>
                                         <connections>
                                             <action selector="thresholdChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VB6-zH-RYg"/>
@@ -76,7 +76,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.60000002384185791" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-vg-lNJ">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.59999999999999998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-vg-lNJ">
                                         <rect key="frame" x="93" y="146" width="685" height="31"/>
                                         <connections>
                                             <action selector="gooinessChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="raq-zU-f3F"/>

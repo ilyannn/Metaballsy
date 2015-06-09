@@ -132,7 +132,11 @@
     _metaballsBuffer = [self.device newBufferWithBytes:metaballs
                                                 length:sizeof(metaballs)
                                                options:MTLResourceOptionCPUCacheModeDefault];
-    
+
+    _parametersBuffer = [self.device newBufferWithBytes:_parameters
+                                                length:sizeof(_parameters)
+                                               options:MTLResourceOptionCPUCacheModeDefault];
+
 }
 
 - (void)setupMetalPipeline {
