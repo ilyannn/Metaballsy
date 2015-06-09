@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="256"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="85W-pH-QKX">
-                                        <rect key="frame" x="148" y="40" width="533" height="31"/>
+                                        <rect key="frame" x="148" y="40" width="548" height="31"/>
                                         <connections>
                                             <action selector="radiusChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kfr-GL-g2E"/>
                                         </connections>
@@ -40,7 +40,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
-                                        <rect key="frame" x="148" y="78" width="533" height="31"/>
+                                        <rect key="frame" x="148" y="78" width="548" height="31"/>
                                         <connections>
                                             <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wwy-OO-hN8"/>
                                         </connections>
@@ -52,7 +52,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.45000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-HW-Z1v">
-                                        <rect key="frame" x="148" y="116" width="533" height="31"/>
+                                        <rect key="frame" x="148" y="116" width="548" height="31"/>
                                         <connections>
                                             <action selector="distanceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5zz-mS-UhI"/>
                                         </connections>
@@ -64,7 +64,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-lV-IB5">
-                                        <rect key="frame" x="148" y="154" width="533" height="31"/>
+                                        <rect key="frame" x="148" y="154" width="548" height="31"/>
                                         <connections>
                                             <action selector="thresholdChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VB6-zH-RYg"/>
                                         </connections>
@@ -76,7 +76,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="SSK-vg-lNJ">
-                                        <rect key="frame" x="148" y="192" width="533" height="31"/>
+                                        <rect key="frame" x="148" y="192" width="548" height="31"/>
                                         <connections>
                                             <action selector="gooinessChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="raq-zU-f3F"/>
                                         </connections>
@@ -156,7 +156,7 @@
                                     <constraint firstItem="bKX-Mt-Gt1" firstAttribute="trailing" secondItem="AKJ-ra-CTv" secondAttribute="trailing" id="e3o-To-A3h"/>
                                     <constraint firstItem="AKJ-ra-CTv" firstAttribute="bottom" secondItem="85W-pH-QKX" secondAttribute="bottom" id="fTi-Dz-cWC"/>
                                     <constraint firstItem="bKX-Mt-Gt1" firstAttribute="bottom" secondItem="SSK-vg-lNJ" secondAttribute="bottom" id="gIp-sW-8kY"/>
-                                    <constraint firstItem="AKJ-ra-CTv" firstAttribute="leading" secondItem="85W-pH-QKX" secondAttribute="trailing" constant="25" id="iFz-8l-ObH"/>
+                                    <constraint firstItem="AKJ-ra-CTv" firstAttribute="leading" secondItem="85W-pH-QKX" secondAttribute="trailing" constant="10" id="iFz-8l-ObH"/>
                                     <constraint firstItem="kUg-2V-n4n" firstAttribute="bottom" secondItem="85W-pH-QKX" secondAttribute="bottom" constant="-5" id="ltL-7T-VNR"/>
                                     <constraint firstItem="bKX-Mt-Gt1" firstAttribute="top" secondItem="SSK-vg-lNJ" secondAttribute="top" id="mwP-tV-0H2"/>
                                     <constraint firstItem="1VY-ka-KPm" firstAttribute="top" secondItem="fYb-rk-ber" secondAttribute="top" id="nXM-Ct-ieb"/>
