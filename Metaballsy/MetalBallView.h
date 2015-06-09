@@ -17,5 +17,5 @@
 @property (nonatomic) float gooiness;
 @property (nonatomic) float threshold;
 @property (nonatomic) float speed;
-@property (nonatomic) float boundary;
+@property (nonatomic) float distance;
 @end

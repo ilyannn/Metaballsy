@@ -171,7 +171,7 @@
     
     float *contents = (float *)[self.metaballsBuffer contents];
     
-    float threshold = self.boundary;
+    float threshold = self.distance;
     static float direction = +1;
     
     if (contents[0] > threshold) {

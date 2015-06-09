@@ -33,7 +33,7 @@
                                             <action selector="radiusChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kfr-GL-g2E"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="1VY-ka-KPm">
                                         <rect key="frame" x="148" y="78" width="602" height="31"/>
                                         <connections>
                                             <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wwy-OO-hN8"/>
@@ -48,10 +48,10 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pVq-HW-Z1v">
                                         <rect key="frame" x="148" y="116" width="602" height="31"/>
                                         <connections>
-                                            <action selector="boundaryChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5zz-mS-UhI"/>
+                                            <action selector="distanceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5zz-mS-UhI"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boundary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDH-cs-1YR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDH-cs-1YR">
                                         <rect key="frame" x="20" y="120" width="111" height="21"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -152,7 +152,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="boundarySlider" destination="pVq-HW-Z1v" id="Ia9-Eg-SP8"/>
+                        <outlet property="distanceSlider" destination="pVq-HW-Z1v" id="Ia9-Eg-SP8"/>
                         <outlet property="gooinessSlider" destination="SSK-vg-lNJ" id="Gyo-bR-TeZ"/>
                         <outlet property="metalBallView" destination="TmG-RH-l6p" id="81Q-DS-ap1"/>
                         <outlet property="radiusSlider" destination="85W-pH-QKX" id="VBU-kY-1Y9"/>

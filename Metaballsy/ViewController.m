@@ -12,7 +12,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISlider *radiusSlider;
 @property (weak, nonatomic) IBOutlet UISlider *speedSlider;
-@property (weak, nonatomic) IBOutlet UISlider *boundarySlider;
+@property (weak, nonatomic) IBOutlet UISlider *distanceSlider;
 @property (weak, nonatomic) IBOutlet UISlider *thresholdSlider;
 @property (weak, nonatomic) IBOutlet UISlider *gooinessSlider;
 
@@ -26,7 +26,7 @@
     
     [self radiusChanged:self];
     [self speedChanged:self];
-    [self boundaryChanged:self];
+    [self distanceChanged:self];
     [self thresholdChanged:self];
     [self gooinessChanged:self];
 }
@@ -39,8 +39,8 @@
     self.metalBallView.speed = self.speedSlider.value; 
 }
 
-- (IBAction)boundaryChanged:(id)sender {
-    self.metalBallView.boundary = self.boundarySlider.value; 
+- (IBAction)distanceChanged:(id)sender {
+    self.metalBallView.distance = self.distanceSlider.value; 
 }
 
 - (IBAction)thresholdChanged:(id)sender {
