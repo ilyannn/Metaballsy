@@ -213,10 +213,10 @@
     [commandEncoder setRenderPipelineState: self.renderPipelineState];    
 
     [commandEncoder setVertexBuffer:self.positionBuffer offset:0 atIndex:0];
-    [commandEncoder setVertexBuffer:self.colorBuffer offset:0 atIndex:1];
-    [commandEncoder setVertexBuffer:self.metaballsBuffer offset:0 atIndex:2];
+    [commandEncoder setVertexBuffer:self.colorBuffer    offset:0 atIndex:1];
 
     [commandEncoder setFragmentBuffer:self.parametersBuffer offset:0 atIndex:0];
+    [commandEncoder setFragmentBuffer:self.metaballsBuffer  offset:0 atIndex:1];
     
     [commandEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3 instanceCount:1];
     [commandEncoder endEncoding];

@@ -14,29 +14,21 @@ using namespace metal;
 struct ColoredVertex
 {
     float4 position [[position]];
+    float4 coords;
     float4 background;
-    float4 vector0;
-    float4 vector1;
-    float4 vector2;
-    float4 vector3;
 };
 
 
 vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
                                  constant float4 *color [[buffer(1)]],
-                                 constant float4 *metaballs [[buffer(2)]],
                                  uint vid [[vertex_id]])
 {
     ColoredVertex vert;
     vert.position = position[vid];
+    vert.coords   = position[vid];
     vert.background = color[vid];
     
     
-    vert.vector0 = position[vid] - metaballs[0];
-    vert.vector1 = position[vid] - metaballs[1];
-    vert.vector2 = position[vid] - metaballs[2];
-    vert.vector3 = position[vid] - metaballs[3];
-        
     return vert;
 }
 
@@ -45,25 +37,24 @@ float RenderMan(float dist_sq, float gooiness) {
 }
 
 fragment float4 fragment_main(ColoredVertex vert [[stage_in]],
-                              constant float  *parameters [[buffer(0)]])
+                              constant float  *parameters [[buffer(0)]],
+                              constant float4 *metaballs [[buffer(1)]]
+                              )
 {    
     float radius    = parameters[0];
     float threshold = parameters[1];
     float gooiness  = parameters[2]; 
     float smooth    = parameters[3];
 
-    float dist0 = length_squared(vert.vector0 / radius);
-    float dist1 = length_squared(vert.vector1 / radius);
-    float dist2 = length_squared(vert.vector2 / radius);
-    float dist3 = length_squared(vert.vector3 / radius);
-
-    float term0 = RenderMan(dist0, gooiness);
-    float term1 = RenderMan(dist1, gooiness);
-    float term2 = RenderMan(dist2, gooiness);
-    float term3 = RenderMan(dist3, gooiness);
+    float sum = 0;
+    for (int i = 0; i < 4; i++) {     
+        float4 vector = vert.coords - metaballs[i];
+        float dist = length_squared(vector / radius);
+        float term = RenderMan(dist, gooiness);
+        sum += term;
+    }
     
-    float density = (term0 + term1 + term2 + term3 / threshold);
-    
+    float density = sum / threshold;    
     float4 color = vert.background;
 
     if (smooth == 0 && density > 1) {
