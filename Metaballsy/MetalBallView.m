@@ -23,9 +23,12 @@
 @property (readonly) id <MTLBuffer> positionBuffer;
 @property (readonly) id <MTLBuffer> colorBuffer;
 @property (readonly) id <MTLBuffer> metaballsBuffer;
+@property (readonly) id <MTLBuffer> parametersBuffer;
 @end
 
-@implementation MetalBallView
+@implementation MetalBallView {
+    float _parameters[3];
+}
 
 
 #pragma mark - UIView setup
@@ -66,6 +69,32 @@
     }
 }
 
+#pragma mark - Accessors
+
+- (float)radius {
+    return _parameters[0];
+}
+
+- (float)threshold {
+    return _parameters[1];
+}
+
+- (float)gooiness {
+    return _parameters[2];
+}
+
+- (void)setRadius:(float)radius {
+    _parameters[0] = radius;
+}
+
+- (void)setThreshold:(float)threshold {
+    _parameters[1] = threshold;
+}
+
+- (void)setGooiness:(float)gooiness {
+    _parameters[2] = gooiness;
+}
+
 
 #pragma mark - Metal setup
 
@@ -92,8 +121,7 @@
         0, 0, 0, 1,
         0, 0, 0, 1,
     };
-    
-    
+        
     _positionBuffer = [self.device newBufferWithBytes:positions
                                                length:sizeof(positions)
                                               options:MTLResourceOptionCPUCacheModeDefault];
@@ -136,11 +164,9 @@
         drawable = [self.metalLayer nextDrawable];
     }
     
-    CGFloat speed = 0.3;
-    
     float *contents = (float *)[self.metaballsBuffer contents];
     
-    float threshold = 0.6;
+    float threshold = self.boundary;
     static float direction = +1;
     
     if (contents[0] > threshold) {
@@ -149,7 +175,7 @@
         direction = +1;
     }
     
-    float step = (1.0/60.0) * speed * direction;
+    float step = (1.0/60.0) * self.speed * direction;
     contents[0] += step;
     contents[5] += step;
     contents[9] -= step;
@@ -171,6 +197,7 @@
     [commandEncoder setVertexBuffer:self.positionBuffer offset:0 atIndex:0 ];
     [commandEncoder setVertexBuffer:self.colorBuffer offset:0 atIndex:1 ];
     [commandEncoder setVertexBuffer:self.metaballsBuffer offset:0 atIndex:2 ];
+    [commandEncoder setVertexBuffer:self.parametersBuffer offset:0 atIndex:3 ];
     [commandEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3 instanceCount:1];
     [commandEncoder endEncoding];
         

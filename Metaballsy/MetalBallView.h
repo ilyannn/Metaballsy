@@ -11,4 +11,11 @@
 
 @interface MetalBallView : UIView
 @property MetalBalls *metalBalls;
+
+// Must set these before displaying the view.
+@property (nonatomic) float radius;
+@property (nonatomic) float gooiness;
+@property (nonatomic) float threshold;
+@property (nonatomic) float speed;
+@property (nonatomic) float boundary;
 @end
