@@ -13,7 +13,7 @@ using namespace metal;
 struct ColoredVertex
 {
     float4 position [[position]];
-    float4 color;
+    float4 background;
     float4 vector0;
     float4 vector1;
     float4 vector2;
@@ -28,7 +28,7 @@ vertex ColoredVertex vertex_main(constant float4 *position [[buffer(0)]],
 {
     ColoredVertex vert;
     vert.position = position[vid];
-    vert.color = color[vid];
+    vert.background = color[vid];
     
     
     vert.vector0 = position[vid] - metaballs[0];
@@ -66,7 +66,7 @@ fragment float4 fragment_main(ColoredVertex vert [[stage_in]],
     
     bool pixel = term0 + term1 + term2 + term3 > threshold;
     
-    float4 color = vert.color;
+    float4 color = vert.background;
 
     if (pixel) {
         color[0] = 0;
